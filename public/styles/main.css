@@ -1,0 +1,27 @@
+.header-title {
+  background-color: pink;
+}
+
+
+
+.email-template {
+  background-color: lightblue;
+  width: 100vw;
+  height: 50vh;
+}
+
+.email-creator {
+  /*background-color: lightgreen;*/
+  width: 100vw;
+
+}
+
+.input-field {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+form {
+  /*display: flex;*/
+  /*flex-grow: row;*/
+}
