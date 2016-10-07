@@ -27,7 +27,7 @@
         <p>
           {{industrySnippet}}
         </p>
-    
+
         <p>
           {{customerSnippet}}
         </p>
@@ -65,20 +65,22 @@
 
         <!-- returned data -->
         <div class="customer-snippets">
-          <h5>Customer snippets</h5>
+          <h5 ng-show="itemsInCustomerArray">Customer snippets</h5>
           <div ng-repeat='company in customerSnippets'>
             <a ng-click="changeCustomerSnippet(company)">
               {{company.customerSnippet}}
             </a>
           </div>
+
+          <h5 ng-show="itemsInIndustryArray">Industry snippets</h5>
+          <div ng-repeat='snippet in industrySnippets'>
+            <a ng-click="changeIndustrySnippet(snippet)">
+              {{snippet.industrySnippet}}
+            </a>
+          </div>
+
         </div>
 
-        <h5>Industry snippets</h5>
-        <div ng-repeat='snippet in industrySnippets'>
-          <a ng-click="changeIndustrySnippet(snippet)">
-            {{snippet.industrySnippet}}
-          </a>
-        </div>
       </div>
 
 
