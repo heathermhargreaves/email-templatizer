@@ -23,15 +23,17 @@
     <section class="main row col s12">
 
       <!-- returned email template -->
-      <div class="email-template col s6">
-        <p>
-          {{industrySnippet}}
-        </p>
-
-        <p>
-          {{customerSnippet}}
-        </p>
+      <div class="row email-template col s6">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" onClick="this.select();" class="materialize-textarea">{{industrySnippet}}&#013&#013{{customerSnippet}}</textarea>
+              <label for="textarea1">Email Template</label>
+            </div>
+          </div>
+        </form>
       </div>
+      {{customerSnippet}}
 
       <!-- email creation section -->
       <div class="email-creator col s6">

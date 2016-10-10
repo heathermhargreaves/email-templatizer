@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autosize": "^3.0.17",
     "materialize-css": "^0.97.7"
   }
 }

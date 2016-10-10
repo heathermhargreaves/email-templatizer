@@ -45,14 +45,15 @@ angular.module('app')
     $scope.filterIndustryData = function() {
       if($scope.industrySnippets.length > 0) {
         $scope.industrySnippets = [];
-        console.log($scope.industrySnippets);
       }
       $scope.industryData.filter(function(obj) {
           if(obj.industry === $scope.industry) {
             $scope.industrySnippets.push(obj);
-            console.log($scope.industrySnippets);
           }
         });
+      if($scope.industrySnippets.length > 0) {
+          $scope.itemsInIndustryArray = true;
+      }
     };
 
 
