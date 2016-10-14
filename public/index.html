@@ -9,15 +9,16 @@
      <!--Import materialize.css-->
      <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.min.css"  media="screen,projection"/>
      <!-- main css file -->
-     <link rel="stylesheet" href="./styles/main.css" media="screen" title="no title">
+     <link rel="stylesheet" href="./assets/styles/styles.css">
      <!--Let browser know website is optimized for mobile-->
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   </head>
+
   <body ng-controller="mainCtrl">
 
     <header class="header-title row col s12">
-      <h1>Create your email</h1>
+      <h2>Create your email</h2>
     </header>
 
     <section class="main row col s12">
@@ -27,13 +28,23 @@
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <textarea id="textarea1" onClick="this.select();" class="materialize-textarea">{{industrySnippet}}&#013&#013{{customerSnippet}}</textarea>
-              <label for="textarea1">Email Template</label>
+              <form class="" action="index.html" method="post">
+                <textarea name="text_area" id="textarea1" onClick="this.select();" class="materialize-textarea">{{industrySnippet}}&#013&#013{{customerSnippet}}</textarea>
+                <label for="textarea1">Email Template</label>
+                <br>
+                <input class="btn waves-effect waves-light" type="button" value="Highlight Text" onClick="javascript:this.form.text_area.focus();this.form.text_area.select();">
+              </form>
+
+              <form class="" action="index.html" method="post">
+
+              </form>
+
             </div>
           </div>
         </form>
+
       </div>
-      {{customerSnippet}}
+
 
       <!-- email creation section -->
       <div class="email-creator col s6">
@@ -72,6 +83,8 @@
             <a ng-click="changeCustomerSnippet(company)">
               {{company.customerSnippet}}
             </a>
+            <br>
+            <br>
           </div>
 
           <h5 ng-show="itemsInIndustryArray">Industry snippets</h5>
@@ -79,6 +92,8 @@
             <a ng-click="changeIndustrySnippet(snippet)">
               {{snippet.industrySnippet}}
             </a>
+            <br>
+            <br>
           </div>
 
         </div>
@@ -97,10 +112,7 @@
     <script src="./materialize/js/animations.js" charset="utf-8"></script>
     <!-- angular -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-    <script src="./app/app.js"></script>
-    <script src="./app/mainCtrl.js"></script>
-    <script src="./app/mainSrvc.js"></script>
-
+    <script src='./bundle.js'></script>
 
   </body>
 </html>
