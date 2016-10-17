@@ -39,7 +39,7 @@ CREATE TABLE ctas
   id SERIAL PRIMARY KEY NOT NULL,
   snippet varchar(400),
   role1_id int references roles(id) not null,
-  role2_id int references roles(id) not null,
+  role2_id int references roles(id),
 );
 
 CREATE TABLE wywyns
@@ -87,3 +87,21 @@ INSERT INTO unique_differentiators (name) VALUES ('self-service');
 INSERT INTO use_cases (name) VALUES ('360 degree view');
 INSERT INTO use_cases (name) VALUES ('faster time to market');
 INSERT INTO use_cases (name) VALUES ('modernize legacy systems');
+INSERT INTO use_cases (name) VALUES ('expanding cloud footprint');
+
+
+--industries
+INSERT INTO industries (name) VALUES ('Telecom');
+INSERT INTO industries (name) VALUES ('Tech');
+INSERT INTO industries (name) VALUES ('Healthcare');
+INSERT INTO industries (name) VALUES ('CPG');
+INSERT INTO industries (name) VALUES ('Retail');
+INSERT INTO industries (name) VALUES ('Banking');
+INSERT INTO industries (name) VALUES ('Higher Education');
+INSERT INTO industries (name) VALUES ('Government');
+INSERT INTO industries (name) VALUES ('Logistics/Manfuacturing');
+
+--use cases
+INSERT INTO ctas (snippet, role1_id, role2_id) VALUES ('Would you be open to having a meeting with our founder to discuss further?', 3, 1);
+INSERT INTO ctas (snippet, role1_id, role2_id) VALUES ('Could you point me in the direction of the best person to talk to about this?', 6);
+INSERT INTO ctas (snippet, role1_id, role2_id) VALUES ('When do you have 15 minutes to have a mindshare around this?', 4, 5);

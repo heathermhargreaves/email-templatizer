@@ -15,96 +15,9 @@
 
   </head>
 
-  <body ng-controller="mainCtrl">
+  <body>
 
-    <header class="header-title row col s12">
-      <h2>Create your email</h2>
-    </header>
-
-    <section class="main row col s12">
-
-      <!-- returned email template -->
-      <div class="row email-template col s6">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <form class="" action="index.html" method="post">
-                <textarea name="text_area" id="textarea1" onClick="this.select();" class="materialize-textarea">{{industrySnippet}}&#013&#013{{customerSnippet}}</textarea>
-                <label for="textarea1">Email Template</label>
-                <br>
-                <input class="btn waves-effect waves-light" type="button" value="Highlight Text" onClick="javascript:this.form.text_area.focus();this.form.text_area.select();">
-              </form>
-
-              <form class="" action="index.html" method="post">
-
-              </form>
-
-            </div>
-          </div>
-        </form>
-
-      </div>
-
-
-      <!-- email creation section -->
-      <div class="email-creator col s6">
-
-            <div class="input-field">
-              <select ng-model='industry'>
-                <option value="" disabled selected>Choose your industry</option>
-                <option value="tech">Tech</option>
-                <option value="healthcare">Healthcare</option>
-                <option value="insurance">Insurance</option>
-                <option value="retail">Retail</option>
-              </select>
-              <label>Select Territory</label>
-            </div>
-
-            <div class="input-field">
-              <select ng-model='territory'>
-                <option value="" disabled selected>Choose your territory</option>
-                <option value="north">North</option>
-                <option value="south">South</option>
-                <option value="east">East</option>
-                <option value="west">West</option>
-              </select>
-              <label>Select Territory</label>
-            </div>
-
-
-            <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="filterCompanyData(); filterIndustryData()">Submit
-              <i class="material-icons right">send</i>
-            </button>
-
-        <!-- returned data -->
-        <div class="customer-snippets">
-          <h5 ng-show="itemsInCustomerArray">Customer snippets</h5>
-          <div ng-repeat='company in customerSnippets'>
-            <a ng-click="changeCustomerSnippet(company)">
-              {{company.customerSnippet}}
-            </a>
-            <br>
-            <br>
-          </div>
-
-          <h5 ng-show="itemsInIndustryArray">Industry snippets</h5>
-          <div ng-repeat='snippet in industrySnippets'>
-            <a ng-click="changeIndustrySnippet(snippet)">
-              {{snippet.industrySnippet}}
-            </a>
-            <br>
-            <br>
-          </div>
-
-        </div>
-
-      </div>
-
-
-
-
-      </div>
-    </section>
+    <ui-view></ui-view>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -112,6 +25,8 @@
     <script src="./materialize/js/animations.js" charset="utf-8"></script>
     <!-- angular -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+
     <script src='./bundle.js'></script>
 
   </body>

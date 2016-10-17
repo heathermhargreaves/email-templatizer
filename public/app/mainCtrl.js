@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('mainCtrl', function($scope, mainSrvc) {
+  .controller('mainCtrl', function($scope, mainSrvc, $stateParams) {
 
     //return for email template
     $scope.company
@@ -49,10 +49,12 @@ angular.module('app')
       $scope.industryData.filter(function(obj) {
           if(obj.industry === $scope.industry) {
             $scope.industrySnippets.push(obj);
+            console.log($scope.industrySnippets);
           }
         });
       if($scope.industrySnippets.length > 0) {
           $scope.itemsInIndustryArray = true;
+          console.log($scope.IndustryArray);
       }
     };
 
