@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-smart-table": "^2.1.8",
     "autosize": "^3.0.17",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",

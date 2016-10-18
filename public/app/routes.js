@@ -23,7 +23,7 @@ angular.module('app')
     url: '/email-creator',
     cache: false,
     templateUrl: './views/email-creator.html',
-    controller: 'mainCtrl'
+    controller: 'emailCtrl'
   });
 
 

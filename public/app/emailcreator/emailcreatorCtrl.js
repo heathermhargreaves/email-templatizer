@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('mainCtrl', function($scope, mainSrvc, $stateParams) {
+  .controller('emailcreatorCtrl', function($scope, emailcreatorSrvc, $stateParams) {
 
     //return for email template
     $scope.company
@@ -16,8 +16,8 @@ angular.module('app')
 
 
     //data from service
-    $scope.companyData = mainSrvc.companyData;
-    $scope.industryData = mainSrvc.industryData;
+    $scope.companyData = emailcreatorSrvc.companyData;
+    $scope.industryData = emailcreatorSrvc.industryData;
 
     $scope.changeCustomerSnippet = function(item) {
       $scope.customerSnippet = item.customerSnippet;

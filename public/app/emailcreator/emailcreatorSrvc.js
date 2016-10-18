@@ -1,5 +1,5 @@
 angular.module('app')
-  .service('mainSrvc', function($http) {
+  .service('emailcreatorSrvc', function($http) {
 
     this.companyData = [
       {
